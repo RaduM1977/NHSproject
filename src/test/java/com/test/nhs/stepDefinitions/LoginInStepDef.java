@@ -23,6 +23,7 @@ public class LoginInStepDef {
     }
     @Then("Login should be successful")
     public void login_should_be_successful() {
+        Assert.assertEquals("http://www.techtorialacademy.link/app",driver.getCurrentUrl());
         Assert.assertEquals("NHS Patient",driver.getTitle());
     }
 }
