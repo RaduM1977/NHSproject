@@ -4,24 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSReRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/LoginInStepDef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Feb-13-02-27-06-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/BrowserUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/ConfigReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/DriverHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/userLogin.feature" afterDir="false" />
+    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="first commit for &quot;US_001_T4-8 Login Page&quot; branch">
+      <change afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Feb-13-02-50-18-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/dashboardCards.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/LoginPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSReRunner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/userLogin.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utils/BrowserUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utils/ConfigReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utils/DriverHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/uiReport.html&quot;,&quot;rerun:target/uiFailedTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/userLogin.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/uiFailedTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiFailedTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/uiReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiReport.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="US_002_T4-8_MainPage_Dashboard" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,17 +56,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/radum/Downloads/NHSproject/src/test/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/radum/Downloads/NHSproject/src/test/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java" />
@@ -114,6 +125,35 @@
       <option name="presentableId" value="Default" />
       <updated>1676269503684</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit for NHS project">
+      <created>1676278586305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676278586305</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit for NHS project">
+      <created>1676389477970</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676389477970</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Second commit for NHS project with url validation">
+      <created>1676389508836</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676389508836</updated>
+    </task>
+    <task id="LOCAL-00004" summary="first commit for &quot;US_001_T4-8 Login Page&quot; branch">
+      <created>1676420816751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676420816752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,5 +166,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit for NHS project" />
+    <MESSAGE value="Second commit for NHS project with url validation" />
+    <MESSAGE value="first commit for &quot;US_001_T4-8 Login Page&quot; branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit for &quot;US_001_T4-8 Login Page&quot; branch" />
   </component>
 </project>
