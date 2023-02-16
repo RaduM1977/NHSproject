@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
         glue = "com/test/nhs/stepDefinitions",
         dryRun = false,
         tags = "@SmokeTest",
+        //tags = "@US_002",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt",
                 "json:target/cucumber-reports/cucumber.json"}
 )
