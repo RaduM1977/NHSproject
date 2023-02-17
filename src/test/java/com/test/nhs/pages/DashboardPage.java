@@ -18,7 +18,7 @@ public class DashboardPage {
     @FindBy(css = ".row div.huge+div")
     List<WebElement> cards;
 
-    @FindBy(css = ".panel-heading div.row")
+    @FindBy(css = ".panel-heading")
     List<WebElement> cardsColor;
     @FindBy(css = ".row div.huge")
     List<WebElement> cardsDisplayNumbers;

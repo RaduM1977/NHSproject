@@ -25,7 +25,7 @@ public class DashboardStepDef {
         Assert.assertEquals(number,dashboardPage.getNumberOfCards());
 //        System.out.println(dashboardPage.getCardsDisplayedNumbers());
 //        System.out.println(dashboardPage.getCardsDisplayedMessage());
-       // System.out.println(dashboardPage.getCardsColors());
+        System.out.println(dashboardPage.getCardsColors());
     }
 
     @Then("validate the display a positive number each")
