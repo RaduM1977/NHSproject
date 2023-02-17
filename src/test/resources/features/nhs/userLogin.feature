@@ -7,7 +7,7 @@ Feature: Sign-in functionality
   @TC_01
   Scenario: TC_01 Registered user - login successfully
     When The correct username and password is entered
-    Then Login successfully by validating title 'NHS Patient' and url 'http://www.techtorialacademy.link/app'
+    Then Login successfully by validating title 'NHS patients' and url 'http://www.techtorialacademy.link/app'
 
    @TC_02
    Scenario: TC_02 Register user - login unsuccessfully with incorrect username and password
