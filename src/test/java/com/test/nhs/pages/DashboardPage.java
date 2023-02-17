@@ -18,6 +18,8 @@ public class DashboardPage {
     @FindBy(css = ".row div.huge+div")
     List<WebElement> cards;
 
+    @FindBy(css = ".panel-heading div.row")
+    List<WebElement> cardsColor;
     @FindBy(css = ".row div.huge")
     List<WebElement> cardsDisplayNumbers;
 
@@ -42,6 +44,12 @@ public class DashboardPage {
         return actualCardsMessages;
     }
 
-
+    public List<String> getCardsColors(){
+        List<String> actualCardsColors = new ArrayList<>();
+        for(WebElement card:cardsColor){
+            actualCardsColors.add(card.getCssValue("border-color"));
+        }
+        return actualCardsColors;
+    }
 
 }
