@@ -20,9 +20,10 @@ Feature: Dashboard cards information
       |Patients waiting   |
       |Free rooms         |
      And validate the message on each card
+
   @TC_07
   Scenario: TC_07 Verify each card on dashboard has the right color
     Then validate the correct color on each card
-      |rgb(255, 255, 255)|
-      |rgb(255, 255, 255)|
-      |rgb(255, 255, 255)|
+      |rgb(51, 122, 183)|
+      |rgb(217, 83, 79)|
+      |rgb(232, 145, 6)|

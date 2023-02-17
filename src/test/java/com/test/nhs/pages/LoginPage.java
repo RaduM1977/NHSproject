@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.BrowserUtils;
 
 public class LoginPage {
 
@@ -23,7 +24,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[.='Sign in']")
     WebElement signInButton;
 
-    By locator = By.xpath("");
+    //By locator = By.xpath("");
 
     //methods
 
@@ -33,5 +34,11 @@ public class LoginPage {
         signInButton.click();
     }
 
+    public String getUserAttribute(){
+        return username.getAttribute("required");
+    }
 
+    public String getPasswordAttribute(){
+        return password.getAttribute("required");
+    }
 }
