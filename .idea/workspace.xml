@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="first commit for &quot;US_002_Dashboard_Page&quot; branch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/dashboardCards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/dashboardCards.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/userLogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/userLogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/uiFailedTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiFailedTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/uiReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiReport.html" afterDir="false" />
-    </list>
+    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="second commit for &quot;US_002_Dashboard_Page&quot; branch with one more test case for the color TC_07" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +24,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -156,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676569163496</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="second commit for &quot;US_002_Dashboard_Page&quot; branch with one more test case for the color TC_07">
+      <created>1676656391334</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676656391334</updated>
+    </task>
+    <task id="LOCAL-00008" summary="second commit for &quot;US_002_Dashboard_Page&quot; branch with one more test case for the color TC_07">
+      <created>1676656518441</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676656518441</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +185,7 @@
     <MESSAGE value="Second commit for NHS project with url validation" />
     <MESSAGE value="first commit for &quot;US_001_T4-8 Login Page&quot; branch" />
     <MESSAGE value="first commit for &quot;US_002_Dashboard_Page&quot; branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit for &quot;US_002_Dashboard_Page&quot; branch" />
+    <MESSAGE value="second commit for &quot;US_002_Dashboard_Page&quot; branch with one more test case for the color TC_07" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit for &quot;US_002_Dashboard_Page&quot; branch with one more test case for the color TC_07" />
   </component>
 </project>
