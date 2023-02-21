@@ -4,8 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.BrowserUtils;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +26,19 @@ public class DashboardPage {
     @FindBy(css = ".row div.huge")
     List<WebElement> cardsDisplayNumbers;
 
+    @FindBy(xpath = "//div[contains(@class,'dataTables_wrapper')]") //css =".dataTables_scroll "
+    List<WebElement> tableCards;
+
+    @FindBy(xpath = "//th[@tabindex='0' and @aria-controls='patients-in-hospital']")
+    List<WebElement> patientsWithRoomsHeader;
+
+    @FindBy(xpath = "//th[text()='Score' and @aria-controls='patients-in-hospital']")
+    WebElement score;
+
+    @FindBy(xpath = "//table[@id='patients-in-hospital']//td[@class='sorting_1']")
+    List<WebElement> scoreColumValues;
+
+    //   ======== methods ================
     public int getNumberOfCards(){
         return cards.size();
     }
@@ -50,6 +66,31 @@ public class DashboardPage {
             actualCardsColors.add(card.getCssValue("border-color"));
         }
         return actualCardsColors;
+    }
+
+    public List<WebElement> checkTablesDisplayed(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+         return wait.until(ExpectedConditions.visibilityOfAllElements(tableCards));
+    }
+
+    public List<String> getPatientsWithRoomsHeaderText(){
+        List<String> actualHeaderText = new ArrayList<>();
+        for(WebElement header: patientsWithRoomsHeader){
+            actualHeaderText.add(BrowserUtils.getText(header));
+        }
+        return actualHeaderText;
+    }
+
+    public String getScoreDefaultValue(){
+        return score.getAttribute("aria-sort");
+    }
+
+    public List<String> getValuesOfScoreColumn(){
+        List<String> actualScoreColumValues = new ArrayList<>();
+        for(WebElement value: scoreColumValues){
+            actualScoreColumValues.add(BrowserUtils.getText(value));
+        }
+        return actualScoreColumValues;
     }
 
 }
