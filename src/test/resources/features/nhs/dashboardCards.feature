@@ -4,6 +4,7 @@ Feature: Dashboard cards information
  Background:
     Given Admin user navigates to NHS website 'http://www.techtorialacademy.link/'
     When The correct username and password is entered
+    And Login successfully by validating title 'NHS patients' and url 'http://www.techtorialacademy.link/app'
 
  @TC_04
  Scenario: TC_04 Verify the number of cards on dashboard
@@ -14,7 +15,7 @@ Feature: Dashboard cards information
     Then validate the display a positive number each
 
  @TC_06
- Scenario: TC_05 Check each card on dashboard display correct information
+ Scenario: TC_06 Check each card on dashboard display correct information
      Then The information cards show on the screen
       |Patients with rooms|
       |Patients waiting   |
