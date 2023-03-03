@@ -24,7 +24,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[.='Sign in']")
     WebElement signInButton;
 
-    //By locator = By.xpath("");
+
 
     //methods
 
@@ -34,11 +34,13 @@ public class LoginPage {
         signInButton.click();
     }
 
-    public String getUserAttribute(){
-        return username.getAttribute("required");
+    public boolean isUserAttributeRequired(){
+
+        return Boolean.parseBoolean(username.getAttribute("required"));
     }
 
-    public String getPasswordAttribute(){
-        return password.getAttribute("required");
+    public boolean isPasswordAttributeRequired(){
+
+        return Boolean.parseBoolean(password.getAttribute("required"));
     }
 }
