@@ -47,3 +47,14 @@ Feature: Add Patient functionality
       | Disease       | Acne       |
     Then the user should be able to see the patient is 'not added' to the dashboard page under 'Patients waiting' tab
 
+  @TC_12
+  Scenario:TC_12 Check required fields for adding a patient are preset and the DOB field is date type format
+    Given the user clicks the add patient button on the left side of the page
+    When the user create a patient
+      | First Name    | John       |
+      | Last Name     | Doe        |
+      | Hospital No.  | 101        |
+      | Date of Birth | 0940395305 |
+      | Gender        | Female     |
+      | Disease       | Acne       |
+    Then the user should not be able to create a patient and should see the message 'The date is not valid.'

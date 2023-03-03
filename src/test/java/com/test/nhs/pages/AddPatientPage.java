@@ -52,6 +52,9 @@ public class AddPatientPage {
     @FindBy(xpath = "//form//label[@class]")
     List<WebElement> displayedFieldList;
 
+    @FindBy(xpath = "//div[contains(text(),'The date is not valid.')]")
+    WebElement invalidDateMessage;
+
     //====== methods =======
 
 //    public void addPatient(String firstname,
@@ -136,5 +139,8 @@ public class AddPatientPage {
             actualDisplayedFieldsText.add(BrowserUtils.getText(field));
         }
             return actualDisplayedFieldsText;
+    }
+    public String getInvalidDataMessage(){
+        return BrowserUtils.getText(invalidDateMessage);
     }
 }

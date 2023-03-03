@@ -52,4 +52,10 @@ public class AddPatientStepDef {
         patientPage.deletePatient();
     }
 
+    @Then("the user should not be able to create a patient and should see the message {string}")
+    public void the_user_should_not_be_able_to_create_a_patient_and_should_see_the_message(String expectedMessage) {
+       Assert.assertEquals(expectedMessage,addPatientPage.getInvalidDataMessage());
+       Assert.assertTrue(addPatientPage.isRequiredAttributeCheck());
+    }
+
 }

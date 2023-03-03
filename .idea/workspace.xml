@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="first commit for &quot;US_003_Feature_Dashboard_Page&quot; branch">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/PatientPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" afterDir="false" />
+    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="first commit for &quot;US_004_AddPatient&quot; branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/LoginInStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/LoginInStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/dashboardCards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_002_dashboardCards.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/dashboardTables.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_003_dashboardTables.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_001_userLogin.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/DashboardPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/DashboardPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/DashboardStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/DashboardStepDef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/LoginInStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/LoginInStepDef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/dashboardCards.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/dashboardTables.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/userLogin.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/AddPatientPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/AddPatientPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/AddPatientStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/AddPatientStepDef.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/uiReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiReport.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676998022096</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="first commit for &quot;US_004_AddPatient&quot; branch">
+      <created>1677807149094</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677807149094</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +246,7 @@
     <MESSAGE value="second commit for &quot;US_002_Dashboard_Page&quot; branch with one more test case for the color TC_07" />
     <MESSAGE value="forth commit for &quot;US_002_Dashboard_Page&quot; branch with validation of the required username and password TC_03" />
     <MESSAGE value="first commit for &quot;US_003_Feature_Dashboard_Page&quot; branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit for &quot;US_003_Feature_Dashboard_Page&quot; branch" />
+    <MESSAGE value="first commit for &quot;US_004_AddPatient&quot; branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit for &quot;US_004_AddPatient&quot; branch" />
   </component>
 </project>
