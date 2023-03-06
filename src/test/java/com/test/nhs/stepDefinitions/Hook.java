@@ -16,7 +16,6 @@ public class Hook {
     @Before
     public void setup(){
 
-
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -25,6 +24,6 @@ public class Hook {
     @After
     public void tearDown(Scenario scenario){
         BrowserUtils.getScreenShotCucumber(scenario,driver);
-        driver.quit();
+       // driver.quit();
     }
 }

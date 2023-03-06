@@ -9,9 +9,10 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/NHS",
         glue = "com/test/nhs/stepDefinitions",
         dryRun = false,
-       tags = "@SmokeTest",
+        tags = "@SmokeTest",
         //tags = "@US_003",
         //tags = "@US_002",
+        //tags = "@US_004",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt",
                 "json:target/cucumber-reports/cucumber.json"}
 )

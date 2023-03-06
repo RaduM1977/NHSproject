@@ -40,11 +40,9 @@ public class LoginInStepDef {
     @When("the blank {string} and,or {string} is entered")
     public void the_blank_and_or_is_entered(String username, String password) {
        loginPage.doLogin(username,password);
-       boolean isRequired = Boolean.parseBoolean(loginPage.getUserAttribute());
-       Assert.assertTrue("Validate the user - the required attribute is true",isRequired);
 
-       isRequired = Boolean.parseBoolean(loginPage.getPasswordAttribute());
-       Assert.assertTrue("Validate the password - required attribute is true",isRequired);
+       Assert.assertTrue("Validate the user - the required attribute is true", loginPage.isUserAttributeRequired());
+       Assert.assertTrue("Validate the password - required attribute is true", loginPage.isPasswordAttributeRequired());
     }
 
 

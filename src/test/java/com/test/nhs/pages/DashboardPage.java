@@ -2,6 +2,7 @@ package com.test.nhs.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,8 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardPage {
-
+    private static int count;
     public DashboardPage(WebDriver driver){
+
         PageFactory.initElements(driver,this);
     }
 
@@ -38,7 +40,14 @@ public class DashboardPage {
     @FindBy(xpath = "//table[@id='patients-in-hospital']//td[@class='sorting_1']")
     List<WebElement> scoreColumValues;
 
-    //   ======== methods ================
+    @FindBy(xpath = "//a[contains(text(),'Add patient')]")
+    WebElement addPatientButton;
+
+    @FindBy(xpath = "//table//tr[@role='row']")
+    List<WebElement> patientsWaitingTable;
+
+
+    //  ======== methods ================
     public int getNumberOfCards(){
         return cards.size();
     }
@@ -93,4 +102,34 @@ public class DashboardPage {
         return actualScoreColumValues;
     }
 
+
+    public void doAddPatientButton(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(addPatientButton)).click();
+    }
+
+    public String doCheckAddPatient(WebDriver driver, String tableHeader){
+        Actions action = new Actions(driver);
+        boolean isAdded = false;
+        boolean isPatientWaitingTable = false;
+
+        for(WebElement patient:patientsWaitingTable){
+            String text = patient.getText();
+            if(text.contains(tableHeader)) {
+                isPatientWaitingTable = true;
+            }
+            if (text.contains("101 John Doe 2")) {
+                    action.doubleClick(patient).build().perform();
+                    System.out.println(text);
+
+                    isAdded = true;
+                    break;
+            }
+
+
+        }
+        count ++;
+        return  isAdded && isPatientWaitingTable && count<2 ? "added":"not added";
+
+    }
 }

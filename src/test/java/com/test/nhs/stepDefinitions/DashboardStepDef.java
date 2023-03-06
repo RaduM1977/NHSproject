@@ -1,17 +1,14 @@
 package com.test.nhs.stepDefinitions;
 
 import com.test.nhs.pages.DashboardPage;
-import com.test.nhs.pages.LoginPage;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utils.BrowserUtils;
 import utils.DriverHelper;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
