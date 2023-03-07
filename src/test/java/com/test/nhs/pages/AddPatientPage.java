@@ -84,7 +84,7 @@ public class AddPatientPage {
     }
 
     //select the gender
-    public void selectGender(String givenGender){
+    private void selectGender(String givenGender){
 
       for(int i = 0;i<genders.size();i++){
           String text = BrowserUtils.getText(genders.get(i));
@@ -110,7 +110,7 @@ public class AddPatientPage {
         }
     }
 
-    public boolean isRequiredAttributeCheck(){
+    public boolean isRequiredAttribute(){
         boolean isRequired = true;
         for (WebElement field:requiredFieldList){
             if(!Boolean.parseBoolean(field.getAttribute("required"))){
@@ -141,6 +141,7 @@ public class AddPatientPage {
             return actualDisplayedFieldsText;
     }
     public String getInvalidDataMessage(){
+
         return BrowserUtils.getText(invalidDateMessage);
     }
 }
