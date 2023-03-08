@@ -1,11 +1,14 @@
 package com.test.nhs.stepDefinitions;
 
 import com.test.nhs.pages.LoginPage;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.ConfigReader;
 import utils.DriverHelper;
+
+import java.util.List;
 
 public class LoginInStepDef {
 
@@ -18,8 +21,16 @@ public class LoginInStepDef {
         driver.get(ConfigReader.readProperty("NHS_url"));
     }
     @When("The correct username and password is entered")
-    public void the_correct_username_and_password_is_entered() {
-       loginPage.doLogin(ConfigReader.readProperty("NHS_Admin_username"),ConfigReader.readProperty("NHS_Admin_Password"));
+    public void the_correct_username_and_password_is_entered(DataTable dataTable) {
+        List<String> userInfo = dataTable.asList();
+        String username = userInfo.get(0);
+        String password = userInfo.get(1);
+        if(username.equals("admin") && password.equals("admin")) {
+            loginPage.doLogin(ConfigReader.readProperty("NHS_Admin_username"), ConfigReader.readProperty("NHS_Admin_Password"));
+        }
+        else{
+            loginPage.doLogin(username,password);
+        }
     }
     @Then("Login successfully by validating title {string} and url {string}")
     public void login_should_be_successful(String title,String url) {
