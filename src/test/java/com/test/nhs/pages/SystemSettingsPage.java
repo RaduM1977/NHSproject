@@ -50,6 +50,16 @@ public class SystemSettingsPage {
     @FindBy(xpath = "//table[@id='diseases-table']//tr/td[contains(@class,'sorting')]")
     private List<WebElement> listOfDiseaseNames;
 
+    // =============== elements of user =========
+    @FindBy(css = "input[name= 'username']")
+    WebElement username;
+    @FindBy(css = "input[name= 'password']")
+    WebElement password;
+    @FindBy(xpath = "//button[.='Add user']")
+    WebElement addUserBtn;
+
+    @FindBy(css = "div .alert-success")
+    WebElement addedUserMessage;
 
     // =========== methods ============
 
@@ -110,11 +120,18 @@ public class SystemSettingsPage {
             }
         }
         return isDeleted;
-
-
     }
 
+    public void addUser(String username, String password){
+        this.username.sendKeys(username);
+        this.password.sendKeys(password);
+        addUserBtn.click();
+    }
 
+    public String addUserMessage(){
+        String actualSuccessMessage = BrowserUtils.getText(addedUserMessage);
+        return actualSuccessMessage;
+    }
 
 
 

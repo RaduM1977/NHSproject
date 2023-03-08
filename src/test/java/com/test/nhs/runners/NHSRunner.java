@@ -13,7 +13,8 @@ import org.junit.runner.RunWith;
         //tags = "@US_003",
         //tags = "@US_002",
         //tags = "@US_004",
-        tags="@US_005",
+        //tags="@US_005",
+        tags="@US_006",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt",
                 "json:target/cucumber-reports/cucumber.json"}
 )

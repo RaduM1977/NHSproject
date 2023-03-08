@@ -2,6 +2,7 @@ package com.test.nhs.stepDefinitions;
 
 import com.test.nhs.pages.DashboardPage;
 import com.test.nhs.pages.SystemSettingsPage;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import utils.DriverHelper;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class SystemSettingsStepDef {
 
@@ -37,8 +39,20 @@ public class SystemSettingsStepDef {
         Assert.assertEquals(expectedRoomsList,actualRoomsList);
     }
 
-    @Then("validate the user can delete selected disease")
-    public void validate_the_user_can_delete_selected_disease() {
+    @Then("validate the user can delete selected room")
+    public void validate_the_user_can_delete_selected_room() {
       Assert.assertTrue(systemSettingsPage.deleteRoom());
     }
+
+    @When("we create a new user")
+    public void we_create_a_new_user(DataTable dataTable) {
+        Map<String,String> inputDataMap = dataTable.asMap();
+        systemSettingsPage.addUser(inputDataMap.get("User name"),inputDataMap.get("Password"));
+    }
+    @Then("validate the message {string}")
+    public void validate_the_message(String expectedMessage) {
+        String actualMessage = systemSettingsPage.addUserMessage();
+        Assert.assertEquals(expectedMessage,actualMessage);
+    }
+
 }

@@ -1,5 +1,5 @@
 @SmokeTest @US_005
-Feature:System Settings functionality
+Feature:System Settings add room functionality
 
   Background:
     Given Admin user navigates to NHS website 'http://www.techtorialacademy.link/'
@@ -17,6 +17,6 @@ Feature:System Settings functionality
     Then validate the rooms are displayed in a table in 'ascending' order
 
   @TC_15
-  Scenario: TC_15 Verify the user should be able to delete the created disease
+  Scenario: TC_15 Verify the user should be able to delete the created room
     When the user clicks the System Settings button on the left side of the page
-    Then validate the user can delete selected disease
+    Then validate the user can delete selected room
