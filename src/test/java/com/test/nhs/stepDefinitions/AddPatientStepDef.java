@@ -48,14 +48,14 @@ public class AddPatientStepDef {
 
     @Then("the user should be able to see the patient is {string} to the dashboard page under {string} tab")
     public void the_user_should_be_able_to_see_the_patient_is_to_the_dashboard_page_under_tab(String isAdded, String tableHeader) {
-        Assert.assertEquals(isAdded,dashboardPage.doCheckAddPatient(driver,tableHeader));
+        Assert.assertEquals(isAdded,dashboardPage.isPatientAdded(driver,tableHeader));
         patientPage.deletePatient();
     }
 
     @Then("the user should not be able to create a patient and should see the message {string}")
     public void the_user_should_not_be_able_to_create_a_patient_and_should_see_the_message(String expectedMessage) {
        Assert.assertEquals(expectedMessage,addPatientPage.getInvalidDataMessage());
-       Assert.assertTrue(addPatientPage.isRequiredAttributeCheck());
+       Assert.assertTrue(addPatientPage.isRequiredAttribute());
     }
 
 }

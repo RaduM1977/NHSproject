@@ -19,7 +19,7 @@ public class DashboardStepDef {
     WebDriver driver = DriverHelper.getDriver();
 
     DashboardPage dashboardPage = new DashboardPage(driver);
-    List<WebElement> actualTables = dashboardPage.checkTablesDisplayed(driver);
+    List<WebElement> actualTables = dashboardPage.isTablesDisplayed(driver);
 
     List<String> expectedHeader;
 
@@ -65,9 +65,10 @@ public class DashboardStepDef {
 
     @Then("validate the number of tables on the dashboard is {int}")
     public void validate_the_number_of_tables_on_the_dashboard_is(int expectedSize) {
-       int actualSize =dashboardPage.checkTablesDisplayed(driver).size();
+       int actualSize =dashboardPage.isTablesDisplayed(driver).size();
        Assert.assertEquals(expectedSize,actualSize);
     }
+
     @Then("the tables are displayed on the page")
     public void the_tables_are_displayed_on_the_page() {
        //List<WebElement> actualTables = dashboardPage.checkTablesDisplayed(driver);

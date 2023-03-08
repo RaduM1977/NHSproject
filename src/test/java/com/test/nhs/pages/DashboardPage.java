@@ -46,6 +46,9 @@ public class DashboardPage {
     @FindBy(xpath = "//table//tr[@role='row']")
     List<WebElement> patientsWaitingTable;
 
+    @FindBy(partialLinkText = "System settings")
+    private WebElement addSystemSettings;
+
 
     //  ======== methods ================
     public int getNumberOfCards(){
@@ -77,7 +80,7 @@ public class DashboardPage {
         return actualCardsColors;
     }
 
-    public List<WebElement> checkTablesDisplayed(WebDriver driver){
+    public List<WebElement> isTablesDisplayed(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
          return wait.until(ExpectedConditions.visibilityOfAllElements(tableCards));
     }
@@ -102,13 +105,19 @@ public class DashboardPage {
         return actualScoreColumValues;
     }
 
-
+// ======= buttons methods ======
     public void doAddPatientButton(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(addPatientButton)).click();
     }
 
-    public String doCheckAddPatient(WebDriver driver, String tableHeader){
+    public void doSystemSettingsButton(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(addSystemSettings)).click();
+    }
+
+    //
+    public String isPatientAdded(WebDriver driver, String tableHeader){
         Actions action = new Actions(driver);
         boolean isAdded = false;
         boolean isPatientWaitingTable = false;
