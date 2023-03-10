@@ -121,7 +121,7 @@ public class AddPatientPage {
        return isRequired;
     }
 
-    public boolean isDisplayed(){
+    public boolean isDisplayedPatient(){
         boolean isDisplayed = true;
         for (WebElement field:displayedFieldList){
             if(!field.isDisplayed()){

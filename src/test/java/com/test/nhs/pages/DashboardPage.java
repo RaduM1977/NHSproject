@@ -21,33 +21,47 @@ public class DashboardPage {
     }
 
     @FindBy(css = ".row div.huge+div")
-    List<WebElement> cards;
+    private List<WebElement> cards;
 
     @FindBy(css = ".panel-heading")
-    List<WebElement> cardsColor;
+    private List<WebElement> cardsColor;
     @FindBy(css = ".row div.huge")
-    List<WebElement> cardsDisplayNumbers;
+    private List<WebElement> cardsDisplayNumbers;
 
     @FindBy(xpath = "//div[contains(@class,'dataTables_wrapper')]") //css =".dataTables_scroll "
-    List<WebElement> tableCards;
+    private List<WebElement> tableCards;
 
     @FindBy(xpath = "//th[@tabindex='0' and @aria-controls='patients-in-hospital']")
-    List<WebElement> patientsWithRoomsHeader;
+    private List<WebElement> patientsWithRoomsHeader;
 
     @FindBy(xpath = "//th[text()='Score' and @aria-controls='patients-in-hospital']")
-    WebElement score;
+    private WebElement score;
 
     @FindBy(xpath = "//table[@id='patients-in-hospital']//td[@class='sorting_1']")
-    List<WebElement> scoreColumValues;
+    private List<WebElement> scoreColumValues;
 
-    @FindBy(xpath = "//a[contains(text(),'Add patient')]")
-    WebElement addPatientButton;
 
     @FindBy(xpath = "//table//tr[@role='row']")
-    List<WebElement> patientsWaitingTable;
+    private List<WebElement> patientsWaitingTable;
+
+
+    // ======== search fields =========
+    @FindBy(xpath = "//input[@aria-controls='patients-waiting']")
+    private  WebElement searchPatientWaiting;
+
+    @FindBy(xpath = "//input[@aria-controls='free-rooms']")
+    private  WebElement searchFreeRooms;
+
+    @FindBy(xpath = "//input[@aria-controls='patients-in-hospital']")
+    private  WebElement searchPatientWithRoom;
+
+
+    // =========== buttons
+    @FindBy(xpath = "//a[contains(text(),'Add patient')]")
+    private WebElement addPatientButton;
 
     @FindBy(partialLinkText = "System settings")
-    private WebElement addSystemSettings;
+    private WebElement addSystemSettingsButton;
 
 
     //  ======== methods ================
@@ -113,11 +127,11 @@ public class DashboardPage {
 
     public void doSystemSettingsButton(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(addSystemSettings)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(addSystemSettingsButton)).click();
     }
 
     //
-    public String isPatientAdded(WebDriver driver, String tableHeader){
+    public String isPatientAdded(WebDriver driver, String tableHeader,String userInfo){
         Actions action = new Actions(driver);
         boolean isAdded = false;
         boolean isPatientWaitingTable = false;
@@ -127,18 +141,28 @@ public class DashboardPage {
             if(text.contains(tableHeader)) {
                 isPatientWaitingTable = true;
             }
-            if (text.contains("101 John Doe 2")) {
+            if (text.contains(userInfo)) {
                     action.doubleClick(patient).build().perform();
                     System.out.println(text);
 
                     isAdded = true;
                     break;
             }
-
-
         }
         count ++;
+        System.out.println(isAdded + " : " + isPatientWaitingTable);
         return  isAdded && isPatientWaitingTable && count<2 ? "added":"not added";
-
     }
+
+    public boolean doSearchPatientWaiting(WebDriver driver, String tableHeader, String patientInfo, String searchMessage){
+        //searchPatientWaiting.sendKeys(searchMessage);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(searchPatientWaiting)).sendKeys(searchMessage);
+        String actualPatientInfo=isPatientAdded(driver,tableHeader,patientInfo);
+
+        return actualPatientInfo.equals("added");
+    }
+
+
+
 }

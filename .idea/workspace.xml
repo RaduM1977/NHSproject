@@ -4,15 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="first commit for &quot;US_004_AddPatient&quot; branch">
+    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="First commit for &quot;US_006_create user&quot; branch">
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-13-12-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-13-20-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-17-13-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-21-13-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-47-03-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-14-42-31-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-16-50-09-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-16-50-16-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-38-45-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-40-58-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-43-08-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-52-01-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-53-21-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-54-48-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-56-27-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-00-19-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-01-36-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-03-23-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-05-14-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-07-26-CST-2023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_007_patientWaitingSearch.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/PatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/PatientPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_001_userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_001_userLogin.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_002_dashboardCards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_002_dashboardCards.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_003_dashboardTables.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_003_dashboardTables.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/AddPatientPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/AddPatientPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/DashboardPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/DashboardPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/PatientPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/PatientPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/AddPatientStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/AddPatientStepDef.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/DashboardStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/DashboardStepDef.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_001_userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_001_userLogin.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_002_dashboardCards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_002_dashboardCards.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_003_dashboardTables.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_003_dashboardTables.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_004_addPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_004_addPatient.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/uiFailedTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiFailedTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/uiReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiReport.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +68,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="US_003_Feature_Dashboard_table_information" />
+        <entry key="$PROJECT_DIR$" value="US_006_createUser" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -224,7 +262,28 @@
       <option name="project" value="LOCAL" />
       <updated>1677807149094</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Second commit for &quot;US_004_AddPatient&quot; branch">
+      <created>1677821167365</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677821167365</updated>
+    </task>
+    <task id="LOCAL-00014" summary="First commit for &quot;US_005_SystemSettings&quot; branch">
+      <created>1678176625493</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678176625493</updated>
+    </task>
+    <task id="LOCAL-00015" summary="First commit for &quot;US_006_create user&quot; branch">
+      <created>1678301403420</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678301403420</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +306,9 @@
     <MESSAGE value="forth commit for &quot;US_002_Dashboard_Page&quot; branch with validation of the required username and password TC_03" />
     <MESSAGE value="first commit for &quot;US_003_Feature_Dashboard_Page&quot; branch" />
     <MESSAGE value="first commit for &quot;US_004_AddPatient&quot; branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit for &quot;US_004_AddPatient&quot; branch" />
+    <MESSAGE value="Second commit for &quot;US_004_AddPatient&quot; branch" />
+    <MESSAGE value="First commit for &quot;US_005_SystemSettings&quot; branch" />
+    <MESSAGE value="First commit for &quot;US_006_create user&quot; branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit for &quot;US_006_create user&quot; branch" />
   </component>
 </project>

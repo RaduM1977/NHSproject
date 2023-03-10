@@ -24,6 +24,6 @@ public class Hook {
     @After
     public void tearDown(Scenario scenario){
         BrowserUtils.getScreenShotCucumber(scenario,driver);
-       driver.quit();
+       //driver.quit();
     }
 }

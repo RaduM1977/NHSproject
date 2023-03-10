@@ -4,6 +4,8 @@ Feature: Add Patient functionality
   Background:
     Given Admin user navigates to NHS website 'http://www.techtorialacademy.link/'
     When The correct username and password is entered
+      |admin|
+      |admin|
     And Login successfully by validating title 'NHS patients' and url 'http://www.techtorialacademy.link/app'
 
   @TC_10
@@ -25,7 +27,8 @@ Feature: Add Patient functionality
       | Gender        | Female     |
       | Disease       | Acne       |
 
-    Then the user should be able to see the patient is 'added' to the dashboard page under 'Patients waiting' tab
+    Then the user should be able to see the patient is 'added' to the dashboard page under 'Patients waiting' table
+    |User info|101 John Doe 2|
 
   @TC_11
   Scenario:TC_11 Check the duplicate patient can not be added the hospital no. is unique
@@ -45,7 +48,8 @@ Feature: Add Patient functionality
       | Date of Birth | 12/03/2021 |
       | Gender        | Female     |
       | Disease       | Acne       |
-    Then the user should be able to see the patient is 'not added' to the dashboard page under 'Patients waiting' tab
+    Then the user should be able to see the patient is 'not added' to the dashboard page under 'Patients waiting' table
+      |User info|101 John Doe 2|
 
   @TC_12
   Scenario:TC_12 Check required fields for adding a patient are preset and the DOB field is date type format
