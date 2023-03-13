@@ -106,7 +106,7 @@ public class DashboardStepDef {
     public void validate_the_search_functionality_of_the_table(String tableHeader,DataTable dataTable) {
         String expectedUserInfo = dataTable.asMap().get("Info").trim();
 
-        Assert.assertTrue(dashboardPage.doSearchPatientWaiting(driver,tableHeader,expectedUserInfo,expectedUserInfo));
+        Assert.assertTrue(dashboardPage.doSearchPatientWaiting(driver,tableHeader,expectedUserInfo));
 
         patientPage.deletePatient(driver);
 

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardPage {
-    private static int count;
+
     public DashboardPage(WebDriver driver){
 
         PageFactory.initElements(driver,this);
@@ -41,8 +41,19 @@ public class DashboardPage {
     private List<WebElement> scoreColumValues;
 
 
-    @FindBy(xpath = "//table//tr[@role='row']")
+    // ========= tables bodies list =========
+    @FindBy(xpath = "//div[@id='patients-waiting_wrapper']//tr[@role='row']")
     private List<WebElement> patientsWaitingTable;
+
+    @FindBy(xpath = "//table[@id='patients-in-hospital']//tbody/tr")
+    private List<WebElement> patientsWithRoomList;
+
+    @FindBy(xpath = "//table[@id='free-rooms']//tbody/tr")
+    private List<WebElement> freeRoomsList;
+
+
+    @FindBy(xpath = "//div[contains(@id,'wrapper') and contains(@class,'dataTables')]//thead/tr")
+    private List<WebElement> tablesHeadersList;
 
 
     // ======== search fields =========
@@ -62,6 +73,8 @@ public class DashboardPage {
 
     @FindBy(partialLinkText = "System settings")
     private WebElement addSystemSettingsButton;
+
+
 
 
     //  ======== methods ================
@@ -132,37 +145,58 @@ public class DashboardPage {
 
     //
     public String isPatientAdded(WebDriver driver, String tableHeader,String userInfo){
+
         Actions action = new Actions(driver);
         boolean isAdded = false;
         boolean isPatientWaitingTable = false;
-
         for(WebElement patient:patientsWaitingTable){
             String text = patient.getText();
+
             if(text.contains(tableHeader)) {
                 isPatientWaitingTable = true;
             }
             if (text.contains(userInfo)) {
                     action.doubleClick(patient).build().perform();
-                    System.out.println(text);
-
+                    System.out.println("patient " + text);
                     isAdded = true;
                     break;
             }
+
         }
-        count ++;
+
         System.out.println(isAdded + " : " + isPatientWaitingTable);
-        return  isAdded && isPatientWaitingTable && count<2 ? "added":"not added";
-    }
-
-    public boolean doSearchPatientWaiting(WebDriver driver, String tableHeader, String patientInfo, String searchMessage){
-        //searchPatientWaiting.sendKeys(searchMessage);
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(searchPatientWaiting)).sendKeys(searchMessage);
-        String actualPatientInfo=isPatientAdded(driver,tableHeader,patientInfo);
-
-        return actualPatientInfo.equals("added");
+        System.out.println(AddPatientPage.count);
+        return  isAdded && isPatientWaitingTable && AddPatientPage.count<2 ? "added":"not added";
     }
 
 
 
-}
+    public boolean doSearchPatientWaiting(WebDriver driver, String tableHeader, String searchMessage){
+        AddPatientPage.count = 1;
+        boolean isFound = false;
+
+        if(tableHeader.equals("Patients waiting")) {
+                searchPatientWaiting.sendKeys(searchMessage);
+                String actualPatientInfo = isPatientAdded(driver, tableHeader, searchMessage);
+                System.out.println("actual added patient" + actualPatientInfo);
+
+                System.out.println(actualPatientInfo);
+                 isFound =  actualPatientInfo.equals("added");
+
+            }
+            if(tableHeader.equals("Patients with rooms")){
+               searchPatientWithRoom.sendKeys(searchMessage);
+               int patientsWithRoomSize = patientsWithRoomList.size();
+                System.out.println(patientsWithRoomSize);
+                isFound = patientsWithRoomSize>0;
+            }
+
+            if(tableHeader.equals("Free rooms")){
+                searchFreeRooms.sendKeys(searchMessage);
+                int freeRoomsSize = freeRoomsList.size();
+                System.out.println(freeRoomsSize);
+                isFound = freeRoomsSize>0;
+            }
+            return isFound;
+        }
+    }

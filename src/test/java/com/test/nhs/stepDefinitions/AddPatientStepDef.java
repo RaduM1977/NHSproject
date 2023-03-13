@@ -41,14 +41,14 @@ public class AddPatientStepDef {
     public void the_user_create_a_patient(DataTable dataTable) {
         Map<String,String> inputMap = dataTable.asMap();
 
-        System.out.println(inputMap);
+        //System.out.println(inputMap);
         addPatientPage.addPatient(inputMap);
-
     }
 
     @Then("the user should be able to see the patient is {string} to the dashboard page under {string} table")
     public void the_user_should_be_able_to_see_the_patient_is_to_the_dashboard_page_under_table(String isAdded, String tableHeader,DataTable dataTable) {
         String expectedUserInfo = dataTable.asMap().get("User info");
+
         Assert.assertEquals(isAdded,dashboardPage.isPatientAdded(driver,tableHeader,expectedUserInfo));
         patientPage.deletePatient(driver);
     }
