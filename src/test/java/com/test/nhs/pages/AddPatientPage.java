@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class AddPatientPage {
-
+     static int count;
     public AddPatientPage(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -63,7 +63,7 @@ public class AddPatientPage {
 //                           String dateOfBirth,
 //                           String gender,
 //                           String disease){
-    public void addPatient(Map<String,String> inputFields){
+    public int addPatient(Map<String,String> inputFields){
 
         String firstname = inputFields.get("First Name");
         String lastname =  inputFields.get("Last Name");
@@ -80,7 +80,8 @@ public class AddPatientPage {
         selectGender(gender);
         selectDiseases(disease);
         addButton.click();
-
+        count++;
+        return count;
     }
 
     //select the gender

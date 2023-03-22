@@ -31,7 +31,7 @@ Feature: Add Patient functionality
     |User info|101 John Doe 2|
 
   @TC_11
-  Scenario:TC_11 Check the duplicate patient can not be added the hospital no. is unique
+  Scenario:TC_11 Check the duplicate patient can not be added, the hospital no. is unique
     Given the user clicks the add patient button on the left side of the page
     When the user create a patient
       | First Name    | John       |

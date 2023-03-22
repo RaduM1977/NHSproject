@@ -4,54 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="First commit for &quot;US_006_create user&quot; branch">
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-13-12-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-13-20-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-17-13-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-21-13-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-11-47-03-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-14-42-31-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-16-50-09-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-17-16-50-16-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-38-45-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-40-58-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-43-08-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-52-01-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-53-21-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-54-48-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-21-56-27-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-00-19-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-01-36-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-03-23-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-05-14-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/screenshot/Fri-Feb-24-22-07-26-CST-2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_007_patientWaitingSearch.feature" afterDir="false" />
+    <list default="true" id="a7034fc3-257c-4ac2-8fe3-f043174282cc" name="Changes" comment="third commit for &quot;US_007_patientWaitingSearch&quot; branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/AddPatientPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/PatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/pages/PatientPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/runners/NHSRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/AddPatientStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/DashboardStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/nhs/stepDefinitions/Hook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_001_userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_001_userLogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_002_dashboardCards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_002_dashboardCards.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_003_dashboardTables.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_003_dashboardTables.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Feb-13-02-27-06-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Feb-13-02-50-18-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-26-22-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-26-24-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-35-13-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-35-15-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-38-36-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-38-38-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-42-07-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-42-09-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-44-53-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-44-55-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Mon-Mar-06-11-50-36-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sat-Feb-25-00-36-12-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sat-Feb-25-01-28-59-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-17-33-10-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-17-37-30-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-17-38-40-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-17-44-38-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-17-48-48-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-20-10-06-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-20-26-43-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-20-28-17-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Sun-Feb-26-20-30-22-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Thu-Feb-16-11-01-50-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Thu-Mar-02-17-23-42-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Thu-Mar-02-17-26-40-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Thu-Mar-02-19-14-07-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Thu-Mar-02-19-17-57-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Thu-Mar-02-19-19-21-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-00-27-07-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-02-47-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-03-54-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-04-47-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-24-04-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-52-44-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-52-57-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-53-04-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-14-17-55-13-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-21-10-32-06-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Tue-Feb-21-10-33-10-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Feb-15-13-09-03-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Mar-01-17-31-56-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Mar-01-17-46-28-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Mar-01-20-12-57-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Mar-01-20-21-12-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Mar-01-20-24-11-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screenshot/Wed-Mar-08-11-37-44-CST-2023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BrowserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BrowserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/DriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/DriverHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_004_addPatient.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/AddPatientPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/AddPatientPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/DashboardPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/DashboardPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/PatientPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/pages/PatientPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/runners/NHSRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/AddPatientStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/AddPatientStepDef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/DashboardStepDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/DashboardStepDef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/nhs/stepDefinitions/Hook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_001_userLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_001_userLogin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_002_dashboardCards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_002_dashboardCards.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_003_dashboardTables.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_003_dashboardTables.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/nhs/US_004_addPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/nhs/US_004_addPatient.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/uiFailedTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiFailedTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/uiReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/uiReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/nhs/US_007_patientWaitingSearch.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/nhs/US_007_patientWaitingSearch.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

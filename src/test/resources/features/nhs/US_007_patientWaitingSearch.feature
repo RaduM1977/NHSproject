@@ -36,30 +36,30 @@ Feature: Patient waiting search functionality
     Then validate the search functionality of the 'Patients waiting' table
       |Info|Doe|
 
-#  @TC_20
-#  Scenario: TC_20 Verify the new user is searchable by full name
-#    Given the user clicks the add patient button on the left side of the page
-#    When the user create a patient
-#      | First Name    | John       |
-#      | Last Name     | Doe        |
-#      | Hospital No.  | 101        |
-#      | Date of Birth | 12/03/2021 |
-#      | Gender        | Female     |
-#      | Disease       | Acne       |
-#
-#    Then validate the search functionality of the 'Patients waiting' table
-#      |Info|John Doe|
-#
-#  @TC_21
-#  Scenario: TC_21 Verify the new user is searchable by hospital no. name
-#    Given the user clicks the add patient button on the left side of the page
-#    When the user create a patient
-#      | First Name    | John       |
-#      | Last Name     | Doe        |
-#      | Hospital No.  | 101        |
-#      | Date of Birth | 12/03/2021 |
-#      | Gender        | Female     |
-#      | Disease       | Acne       |
-#
-#    Then validate the search functionality of the 'Patients waiting' table
-#      |Info|101|
+  @TC_20
+  Scenario: TC_20 Verify the new user is searchable by full name
+    Given the user clicks the add patient button on the left side of the page
+    When the user create a patient
+      | First Name    | John       |
+      | Last Name     | Doe        |
+      | Hospital No.  | 101        |
+      | Date of Birth | 12/03/2021 |
+      | Gender        | Female     |
+      | Disease       | Acne       |
+
+    Then validate the search functionality of the 'Patients waiting' table
+      |Info|John Doe|
+
+  @TC_21
+  Scenario: TC_21 Verify the new user is searchable by hospital no. name
+    Given the user clicks the add patient button on the left side of the page
+    When the user create a patient
+      | First Name    | John       |
+      | Last Name     | Doe        |
+      | Hospital No.  | 101        |
+      | Date of Birth | 12/03/2021 |
+      | Gender        | Female     |
+      | Disease       | Acne       |
+
+    Then validate the search functionality of the 'Patients waiting' table
+      |Info|101|

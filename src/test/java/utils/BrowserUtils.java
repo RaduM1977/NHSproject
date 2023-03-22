@@ -81,6 +81,7 @@ public class BrowserUtils {
 
     public static void getScreenShot(WebDriver driver, String packageName)  {
         File file =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
         String location=System.getProperty("user.dir")+"/src/java/screenshot"+packageName;
 
         try {
@@ -98,7 +99,9 @@ public class BrowserUtils {
         if(scenario.isFailed()){
             File screenShotFile =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             try {
-                FileUtils.copyFile(screenShotFile,new File("src/test/java/screenshot/"+screenShotFileName+".png"));
+               //FileUtils.copyFile(screenShotFile,new File("src/test/java/screenshot/"+screenShotFileName+".png"));
+                FileUtils.copyFile(screenShotFile,new File("screenshot/"+screenShotFileName+".png"));
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

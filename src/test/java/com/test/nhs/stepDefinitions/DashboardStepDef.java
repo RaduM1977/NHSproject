@@ -3,6 +3,7 @@ package com.test.nhs.stepDefinitions;
 import com.test.nhs.pages.DashboardPage;
 import com.test.nhs.pages.PatientPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -102,13 +103,18 @@ public class DashboardStepDef {
         }
     }
 
+    @Given("the user search in {string}")
+    public void the_user_search_in(String expectedRoomName) {
+        Assert.assertTrue(dashboardPage.searchBoxAttributeValue(expectedRoomName));
+    }
+
     @Then("validate the search functionality of the {string} table")
     public void validate_the_search_functionality_of_the_table(String tableHeader,DataTable dataTable) {
         String expectedUserInfo = dataTable.asMap().get("Info").trim();
-
-        Assert.assertTrue(dashboardPage.doSearchPatientWaiting(driver,tableHeader,expectedUserInfo,expectedUserInfo));
-
-        patientPage.deletePatient(driver);
-
+        Assert.assertTrue(dashboardPage.doSearch(driver,tableHeader,expectedUserInfo));
+        //patientPage.deletePatient(driver);
+        if(tableHeader.equalsIgnoreCase("Patients waiting")) patientPage.deletePatient(driver);
     }
+
+
 }
