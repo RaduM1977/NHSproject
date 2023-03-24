@@ -4,6 +4,8 @@ test-output/
 build/
 reports/
 
+configuration.properties
+
 application.log
 ##############################
 ## Java
