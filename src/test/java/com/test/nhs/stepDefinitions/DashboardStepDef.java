@@ -1,7 +1,9 @@
 package com.test.nhs.stepDefinitions;
 
 import com.test.nhs.pages.DashboardPage;
+import com.test.nhs.pages.PatientPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -14,14 +16,12 @@ import java.util.List;
 
 public class DashboardStepDef {
     List<String> expectedMessages = new ArrayList<>();
-
-
     WebDriver driver = DriverHelper.getDriver();
-
     DashboardPage dashboardPage = new DashboardPage(driver);
     List<WebElement> actualTables = dashboardPage.isTablesDisplayed(driver);
-
     List<String> expectedHeader;
+
+    PatientPage patientPage =  new PatientPage(driver);
 
     @Then("validate the number of cards on the dashboard is {int}")
     public void validate_the_number_of_cards_on_the_dashboard_is(int number) {
@@ -93,7 +93,7 @@ public class DashboardStepDef {
         //assertion by using the aria-short attribute
       Assert.assertEquals(sortingType,dashboardPage.getScoreDefaultValue());
 
-      //Assert by comparing the 2 lists
+        //Assert by comparing the 2 lists
         List<String> expectedScoreColumValue = dashboardPage.getValuesOfScoreColumn();
         int expectedListSize= expectedScoreColumValue.size();
         for(int i = 0; i<expectedListSize;i++) {
@@ -102,4 +102,19 @@ public class DashboardStepDef {
             Assert.assertEquals(expectedScoreColumValue.get(expectedListSize-(i+1)), dashboardPage.getValuesOfScoreColumn().get(i));
         }
     }
+
+    @Given("the user search in {string}")
+    public void the_user_search_in(String expectedRoomName) {
+        Assert.assertTrue(dashboardPage.searchBoxAttributeValue(expectedRoomName));
+    }
+
+    @Then("validate the search functionality of the {string} table")
+    public void validate_the_search_functionality_of_the_table(String tableHeader,DataTable dataTable) {
+        String expectedUserInfo = dataTable.asMap().get("Info").trim();
+        Assert.assertTrue(dashboardPage.doSearch(driver,tableHeader,expectedUserInfo));
+        //patientPage.deletePatient(driver);
+        if(tableHeader.equalsIgnoreCase("Patients waiting")) patientPage.deletePatient(driver);
+    }
+
+
 }

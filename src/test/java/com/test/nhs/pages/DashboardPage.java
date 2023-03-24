@@ -14,40 +14,70 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardPage {
-    private static int count;
+
     public DashboardPage(WebDriver driver){
 
         PageFactory.initElements(driver,this);
     }
 
     @FindBy(css = ".row div.huge+div")
-    List<WebElement> cards;
+    private List<WebElement> cards;
 
     @FindBy(css = ".panel-heading")
-    List<WebElement> cardsColor;
+    private List<WebElement> cardsColor;
     @FindBy(css = ".row div.huge")
-    List<WebElement> cardsDisplayNumbers;
+    private List<WebElement> cardsDisplayNumbers;
 
     @FindBy(xpath = "//div[contains(@class,'dataTables_wrapper')]") //css =".dataTables_scroll "
-    List<WebElement> tableCards;
+    private List<WebElement> tableCards;
 
     @FindBy(xpath = "//th[@tabindex='0' and @aria-controls='patients-in-hospital']")
-    List<WebElement> patientsWithRoomsHeader;
+    private List<WebElement> patientsWithRoomsHeader;
 
     @FindBy(xpath = "//th[text()='Score' and @aria-controls='patients-in-hospital']")
-    WebElement score;
+    private WebElement score;
 
     @FindBy(xpath = "//table[@id='patients-in-hospital']//td[@class='sorting_1']")
-    List<WebElement> scoreColumValues;
+    private List<WebElement> scoreColumValues;
 
+
+    // ========= tables bodies list =========
+    @FindBy(xpath = "//div[@id='patients-waiting_wrapper']//tr[@role='row']")
+    private List<WebElement> patientsWaitingTable;
+
+    @FindBy(xpath = "//table[@id='patients-in-hospital']//tbody/tr")
+    private List<WebElement> patientsWithRoomList;
+
+    @FindBy(xpath = "//table[@id='free-rooms']//tbody/tr")
+    private List<WebElement> freeRoomsList;
+
+
+    @FindBy(xpath = "//div[contains(@id,'wrapper') and contains(@class,'dataTables')]//thead/tr")
+    private List<WebElement> tablesHeadersList;
+
+
+    // ======== search fields =========
+    @FindBy(xpath = "//input[@aria-controls='patients-waiting']")
+    private  WebElement searchPatientWaiting;
+
+    @FindBy(xpath = "//input[@aria-controls='free-rooms']")
+    private  WebElement searchFreeRooms;
+
+    @FindBy(xpath = "//input[@aria-controls='patients-in-hospital']")
+    private  WebElement searchPatientWithRoom;
+
+    @FindBy(tagName = "input")
+    List<WebElement> searchBoxFieldsList;
+
+
+    // =========== buttons
     @FindBy(xpath = "//a[contains(text(),'Add patient')]")
-    WebElement addPatientButton;
-
-    @FindBy(xpath = "//table//tr[@role='row']")
-    List<WebElement> patientsWaitingTable;
+    private WebElement addPatientButton;
 
     @FindBy(partialLinkText = "System settings")
-    private WebElement addSystemSettings;
+    private WebElement addSystemSettingsButton;
+
+
 
 
     //  ======== methods ================
@@ -113,32 +143,75 @@ public class DashboardPage {
 
     public void doSystemSettingsButton(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(addSystemSettings)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(addSystemSettingsButton)).click();
     }
 
     //
-    public String isPatientAdded(WebDriver driver, String tableHeader){
+    public String isPatientAdded(WebDriver driver, String tableHeader,String userInfo){
+
         Actions action = new Actions(driver);
         boolean isAdded = false;
         boolean isPatientWaitingTable = false;
-
         for(WebElement patient:patientsWaitingTable){
             String text = patient.getText();
+
             if(text.contains(tableHeader)) {
                 isPatientWaitingTable = true;
             }
-            if (text.contains("101 John Doe 2")) {
+            if (text.contains(userInfo)) {
                     action.doubleClick(patient).build().perform();
-                    System.out.println(text);
-
+                    //System.out.println("patient " + text);
                     isAdded = true;
                     break;
             }
 
-
         }
-        count ++;
-        return  isAdded && isPatientWaitingTable && count<2 ? "added":"not added";
+
+//        System.out.println(isAdded + " : " + isPatientWaitingTable);
+//        System.out.println(AddPatientPage.count);
+        return  isAdded && isPatientWaitingTable && AddPatientPage.count<2 ? "added":"not added";
+    }
+
+
+    public boolean searchBoxAttributeValue(String attributeValue){
+            boolean isValue = false;
+        for(WebElement element:searchBoxFieldsList){
+            String value = element.getAttribute("aria-controls").replace("-"," ");
+            if(attributeValue.equalsIgnoreCase(value)){
+                isValue = true;
+                break;
+            }
+        }
+        return isValue;
+    }
+
+    public boolean doSearch(WebDriver driver, String tableHeader, String searchMessage){
+        AddPatientPage.count = 1;
+        boolean isFound = false;
+
+        if(tableHeader.equals("Patients waiting")) {
+                searchPatientWaiting.sendKeys(searchMessage);
+                String actualPatientInfo = isPatientAdded(driver, tableHeader, searchMessage);
+                System.out.println("actual added patient" + actualPatientInfo);
+
+                System.out.println(actualPatientInfo);
+                 isFound =  actualPatientInfo.equals("added");
+
+            }
+            if(tableHeader.equals("Patients with rooms")){
+               searchPatientWithRoom.sendKeys(searchMessage);
+               int patientsWithRoomSize = patientsWithRoomList.size();
+                System.out.println(patientsWithRoomSize);
+                isFound = patientsWithRoomSize>0;
+            }
+
+            if(tableHeader.equals("Free rooms")){
+                searchFreeRooms.sendKeys(searchMessage);
+                int freeRoomsSize = freeRoomsList.size();
+                System.out.println(freeRoomsSize);
+                isFound = freeRoomsSize>0;
+            }
+            return isFound;
+        }
 
     }
-}

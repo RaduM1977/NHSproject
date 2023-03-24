@@ -4,6 +4,8 @@ Feature: Dashboard cards information
  Background:
     Given Admin user navigates to NHS website 'http://www.techtorialacademy.link/'
     When The correct username and password is entered
+      |admin|
+      |admin|
     And Login successfully by validating title 'NHS patients' and url 'http://www.techtorialacademy.link/app'
 
  @TC_04
