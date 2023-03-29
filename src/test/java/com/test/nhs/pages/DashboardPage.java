@@ -10,8 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.BrowserUtils;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class DashboardPage {
 
@@ -44,9 +43,13 @@ public class DashboardPage {
     // ========= tables bodies list =========
     @FindBy(xpath = "//div[@id='patients-waiting_wrapper']//tr[@role='row']")
     private List<WebElement> patientsWaitingTable;
-
+    @FindBy(xpath = "//table[@id='patients-waiting']/tbody/tr[@role='row']")
+    List<WebElement> patientsWaitingBodyList;
     @FindBy(xpath = "//table[@id='patients-in-hospital']//tbody/tr")
     private List<WebElement> patientsWithRoomList;
+
+    @FindBy(xpath = "//table[@id='patients-in-hospital']//tr[@role='row'][1]")
+    List<WebElement> listOfPatientsWithRooms;
 
     @FindBy(xpath = "//table[@id='free-rooms']//tbody/tr")
     private List<WebElement> freeRoomsList;
@@ -70,14 +73,15 @@ public class DashboardPage {
     List<WebElement> searchBoxFieldsList;
 
 
-    // =========== buttons
+    // =========== buttons ==============
     @FindBy(xpath = "//a[contains(text(),'Add patient')]")
     private WebElement addPatientButton;
 
     @FindBy(partialLinkText = "System settings")
     private WebElement addSystemSettingsButton;
 
-
+    @FindBy(partialLinkText = "Dashboard")
+    private WebElement dashboardButton;
 
 
     //  ======== methods ================
@@ -144,6 +148,9 @@ public class DashboardPage {
     public void doSystemSettingsButton(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(addSystemSettingsButton)).click();
+    }
+    public void doDashboardButton(){
+        dashboardButton.click();
     }
 
     //
@@ -213,5 +220,78 @@ public class DashboardPage {
             }
             return isFound;
         }
+
+        //maps of freeRooms,rooms with patients and patient info
+        private Map<String,Boolean> getRoomWithPatients(){
+        Map<String,Boolean> roomsWithPatientsMap = new HashMap<>();
+            for(WebElement element:patientsWithRoomList){
+                String text = BrowserUtils.getText(element);
+                String[] patientInfo = text.split(" ");
+                String room = "Room "+patientInfo[patientInfo.length-2];
+                roomsWithPatientsMap.put(room,true);
+            }
+            return roomsWithPatientsMap;
+        }
+
+        private Map<String,Boolean> getFreeRooms(){
+            Map<String,Boolean> freeRoomsMap = new HashMap<>();
+            for(WebElement element:freeRoomsList){
+                String text = BrowserUtils.getText(element);
+                freeRoomsMap.put(text,false);
+            }
+            return freeRoomsMap;
+        }
+        public Map<String, Object> roomsMap(){
+        Map<String,Object> roomMap = new HashMap<>();
+        roomMap.putAll(getRoomWithPatients());
+        roomMap.putAll(getFreeRooms());
+        return roomMap;
+    }
+
+
+    private List<Map<String, String>> infoListOfPatientsWithRoom(){
+
+        List<Map<String,String>> patientsInfoList = new ArrayList<>();
+        for(WebElement element: patientsWithRoomList){
+            Map<String,String> patientInfoMap = new LinkedHashMap<>();
+            String[] patientInfoArray = BrowserUtils.getText(element).split(" ");
+                patientInfoMap.put("hospitalNumber",patientInfoArray[0]);
+                patientInfoMap.put("firstName",patientInfoArray[1]);
+                patientInfoMap.put("lastName",patientInfoArray[2]);
+                patientInfoMap.put("room",patientInfoArray[3]+" "+patientInfoArray[4]);
+                patientInfoMap.put("score",patientInfoArray[patientInfoArray.length-1]);
+
+                patientsInfoList.add(patientInfoMap);
+        }
+        return patientsInfoList;
+    }
+    private List<Map<String,String>> infoPatientsWithNoRooms(){
+        List<Map<String,String>> patientsInfoList = new ArrayList<>();
+
+        for(WebElement element: patientsWaitingBodyList){
+            Map<String,String> patientInfoMap = new LinkedHashMap<>();
+            String[] patientInfoArray = BrowserUtils.getText(element).split(" ");
+            //System.out.println(Arrays.toString(patientInfoArray));
+
+            patientInfoMap.put("hospitalNumber",patientInfoArray[0]);
+            patientInfoMap.put("firstName",patientInfoArray[1]);
+            patientInfoMap.put("lastName",patientInfoArray[2]);
+            patientInfoMap.put("room","noroom");
+            patientInfoMap.put("score",patientInfoArray[patientInfoArray.length-1]);
+
+            patientsInfoList.add(patientInfoMap);
+        }
+        return patientsInfoList;
+    }
+
+   public List<Map<String, String>> patientsInfo(){
+        List<Map<String,String>> patientInfoList= new ArrayList<>();
+        patientInfoList.addAll(infoListOfPatientsWithRoom());
+        patientInfoList.addAll(infoPatientsWithNoRooms());
+
+        patientInfoList.sort(Comparator.comparing(map-> map.get("hospitalNumber")));
+        return patientInfoList;
+
+   }
 
     }
