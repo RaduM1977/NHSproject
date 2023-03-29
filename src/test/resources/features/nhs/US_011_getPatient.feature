@@ -1,5 +1,5 @@
-@SmokeTest @US_010
-Feature: Rooms list functionality with API
+@SmokeTest @US_011
+Feature: Patients list functionality with API
 
   Background:
     Given Admin user navigates to NHS website 'http://www.techtorialacademy.link/'
@@ -7,10 +7,10 @@ Feature: Rooms list functionality with API
       |admin|
       |admin|
 
-  @TC_25
-  Scenario:TC_25 Verify the list of rooms with API
+  @TC_26
+  Scenario:TC_26 Verify the list of patients with API
 #    When the user clicks the System Settings button on the left side of the page
-    When the get request for 'http://www.techtorialacademy.link/app/getrooms/' is made
-    Then validate the user should see the same list of rooms in UI and in API
+    When the get request for 'http://www.techtorialacademy.link/app/getpatients' is made
+    Then validate the user should see the same list of patients in UI and in API
     And appropriate status code should be displayed
       |200|

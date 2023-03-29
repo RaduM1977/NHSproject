@@ -3,8 +3,10 @@ package com.test.nhs.stepDefinitions;
 import com.test.nhs.pages.DashboardPage;
 import com.test.nhs.pages.PatientPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,9 +46,7 @@ public class DashboardStepDef {
 
         List<String> allMessages = dataTable.asList();
         expectedMessages.addAll(allMessages);
-//        expectedMessages.add(allMessages.get(0));
-//        expectedMessages.add(allMessages.get(1));
-//        expectedMessages.add(allMessages.get(2));
+
 
     }
     @Then("validate the message on each card")
@@ -115,6 +115,7 @@ public class DashboardStepDef {
         //patientPage.deletePatient(driver);
         if(tableHeader.equalsIgnoreCase("Patients waiting")) patientPage.deletePatient(driver);
     }
+
 
 
 }

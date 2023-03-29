@@ -9,9 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.BrowserUtils;
 
 import java.time.Duration;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class SystemSettingsPage {
         static String roomNo;
@@ -41,6 +39,9 @@ public class SystemSettingsPage {
     @FindBy(xpath = "//input[@value='Delete rooms']")
     private WebElement deleteRoomsBtn;
 
+    @FindBy(xpath = "//table[@id='rooms-table']//td[contains(@class,'sorting')]")
+    List<WebElement> listOfRoomsNames;
+
 
     // ===== elements of the diseases ====
 
@@ -49,6 +50,13 @@ public class SystemSettingsPage {
 
     @FindBy(xpath = "//table[@id='diseases-table']//tr/td[contains(@class,'sorting')]")
     private List<WebElement> listOfDiseaseNames;
+
+    @FindBy(xpath = "//table[@id]")
+    private List<WebElement> listOfTableNames;
+
+    @FindBy(css = "table#diseases-table td[class*='sorting']+td")
+    private List<WebElement> listOfScores;
+
 
     // =============== elements of user =========
     @FindBy(css = "input[name= 'username']")
@@ -133,7 +141,54 @@ public class SystemSettingsPage {
         return actualSuccessMessage;
     }
 
+    public List<String> systemSettingsList(String tableName){
+        List<String> actualList = new ArrayList<>();
+        switch (tableName) {
+            case "diseases": {
+                for (WebElement element : listOfDiseaseNames) {
+                    String text = BrowserUtils.getText(element);
+                    actualList.add(text);
+                }
+                break;
+            }
+            case "rooms": {
+                for (WebElement element : listOfRoomsNames) {
+                    String text = BrowserUtils.getText(element);
+                    actualList.add(text);
+                }
+                break;
+            }
+        }
 
+        return actualList;
+    }
+
+    public List<Object> scoreList(){
+        List<Object> actualScoreList = new ArrayList<>();
+        for(WebElement element: listOfScores){
+            //String text = BrowserUtils.getText(element);
+            Integer score = Integer.valueOf(BrowserUtils.getText(element));
+            actualScoreList.add(score);
+        }
+        return actualScoreList;
+    }
+
+    public Map<String,Object> diseasesScoreMap(String tableName){
+        Map<String,Object> diseasesScoreMap = new HashMap<>();
+        for (int i=0;i< scoreList().size();i++){
+            diseasesScoreMap.put(systemSettingsList(tableName).get(i),scoreList().get(i));
+        }
+        return diseasesScoreMap;
+    }
+
+//    public void selectTableName(String tableName){
+//        for(WebElement element: listOfTableNames){
+//            String attributeText = element.getAttribute("id");
+//            if(attributeText.contains(tableName)){
+//
+//            }
+//        }
+//    }
 
 
 //    public List<String> diseaseOrdered(String sortingAttribute){
